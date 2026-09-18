@@ -8,6 +8,7 @@ This document details everything built in the **NexCampus** workspace, covering 
 
 ```
 NexCampus/
+├── .git/                        # Local Git version control repository (branch: main)
 ├── src/                         # Original Complete React Campus Portal (Active UI)
 │   ├── Components/
 │   │   ├── 1.Header/            # Top navigation bar, search, notifications, profile
@@ -17,7 +18,8 @@ NexCampus/
 │   │   ├── 5.Attendence/        # Attendance charts, donut stats, logs
 │   │   ├── 6.TimetablePage/     # Weekly class schedule, timetable matrix, quick links
 │   │   ├── 7.Grades/            # GPA tracking, semester breakdown, grade tables
-│   │   └── 8.NoticeBoard/       # Campus announcements, filters, detailed notices
+│   │   ├── 8.NoticeBoard/       # Campus announcements, filters, detailed notices
+│   │   └── login/               # Multi-role login & landing screen (Student/Faculty/Admin)
 │   ├── App.jsx                  # Main shell layout (Sidebar + Header + Outlet)
 │   ├── main.jsx                 # React Router v7 routes definition
 │   └── App.css                  # Core global styling
@@ -29,8 +31,11 @@ NexCampus/
 │   │   ├── urls.py              # Main URL dispatcher (/admin/, /api/)
 │   │   └── wsgi.py / asgi.py
 │   ├── api/                     # Starter REST API application
+│   │   ├── admin.py             # Registered User & StudentProfile models in Admin
+│   │   ├── models.py            # Custom User & StudentProfile data models
+│   │   ├── serializers.py       # JWT token serializers with custom role/username claims
 │   │   ├── views.py             # Health check & sample dashboard endpoints
-│   │   └── urls.py              # API endpoint routes
+│   │   └── urls.py              # API endpoint routes (/auth/login/, /auth/refresh/)
 │   ├── .env                     # Database credentials (PostgreSQL / SQLite toggle)
 │   ├── .env.example             # Environment variable template
 │   ├── requirements.txt         # Python dependencies
@@ -46,7 +51,7 @@ NexCampus/
 │   └── extensions.json          # Curated workspace extension recommendations
 ├── package.json                 # Root npm dependencies (Bootstrap 5, Recharts, Icons)
 ├── vite.config.js               # Root Vite configuration
-└── .gitignore                   # Ignore rules for node_modules, Python .venv, and .env
+└── .gitignore                   # Ignore rules for node_modules, Python .venv, .env, and *.zip
 ```
 
 ---
@@ -82,6 +87,7 @@ NexCampus/
 | **`6.TimetablePage`** | `TimetablePage.jsx`, `Timetable.jsx`, `OverviewCards.jsx`, `QuickLinks.jsx`, `UpcomingClasses.jsx` | Weekly schedule matrix with time slots, upcoming lecture cards, and quick link shortcuts. |
 | **`7.Grades`** | `Grades.jsx`, `GradeTable.jsx`, `SemesterCard.jsx` | GPA calculation, semester progression cards, subject credit breakdown, and grading tables. |
 | **`8.NoticeBoard`** | `NoticeBoard.jsx`, `NoticeBoard.module.css` | Interactive notice board with search, category filtering (Academic, Exam, Events), and detailed notice modals. |
+| **`login`** | `LoginPage.jsx`, `LoginPage.module.css` | Multi-role portal login page (Student, Faculty, Admin) featuring password toggle, campus branding, and modern responsive split layout. |
 
 ---
 
@@ -95,7 +101,6 @@ NexCampus/
 * **PostgreSQL Driver:** `psycopg` 3.3.5 & `psycopg-binary` 3.3.5
 * **Environment Management:** `python-dotenv` 1.2.3
 * **Python Version:** 3.14.5 in `backend/.venv`
-
 
 ### Configuration (`backend/core/settings.py`)
 1. **User Model (`AUTH_USER_MODEL = 'api.User'`):**
@@ -120,10 +125,12 @@ NexCampus/
   * One-to-one link to `User`
   * `admission_id` (unique), `registration_number`, `course`, `session_year`
 
-### Authentication & Endpoints (`backend/api/urls.py`)
+### Authentication & Endpoints (`backend/api/urls.py` & `backend/core/urls.py`)
 * **`POST /api/auth/login/`** ➔ `CustomTokenObtainPairView` (Returns access & refresh tokens with custom `role` and `username` claims in JWT payload).
 * **`POST /api/auth/refresh/`** ➔ `TokenRefreshView` (Renews access token).
-
+* **`GET /api/health/`** ➔ `health_check` endpoint returning backend & database connection status.
+* **`GET /api/dashboard/`** ➔ `sample_dashboard_data` endpoint for student metrics.
+* **`GET /admin/`** ➔ Built-in Django administration panel with registered `User` and `StudentProfile` models.
 
 ---
 
@@ -135,3 +142,17 @@ NexCampus/
 
 ## 5. IDE & Tooling (`.vscode/`)
 * **[`extensions.json`](.vscode/extensions.json):** Workspace recommendations configured for ESLint, Prettier, React snippets, Bootstrap intellisense, tag management, and Error Lens.
+
+---
+
+## 6. Version Control & Git Configuration (`.git/`)
+* **System:** Local Git version control initialized in the workspace.
+* **Primary Branch:** `main`
+* **Configured Identity:** `Satrajit Chakraborty <satrajit2006chakraborty@gmail.com>`
+* **Initial Commit:** `django setup done`
+* **Exclusion Safeguards ([`.gitignore`](.gitignore)):**
+  * Environment variables (`.env`, `backend/.env`)
+  * Python environments (`backend/.venv/`, `venv/`)
+  * Local databases (`*.sqlite3`)
+  * Package managers & build artifacts (`node_modules/`, `dist/`)
+  * Archive bundles (`*.zip`, `*.tar.gz`)
