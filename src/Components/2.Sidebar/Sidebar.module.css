@@ -1,0 +1,90 @@
+.sidebar {
+  width: 210px;
+  height: 100%;
+  background: #ffffff;
+  border-right: 1px solid #eef1f6;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.logoMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1dd4c9, #18b8b5);
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #17203a;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 14px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: #667085;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  background: #f8fafc;
+}
+
+.active {
+  background: #e8f9f8;
+  color: #19bcb7;
+  font-weight: 600;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  min-width: 22px;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.badge {
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #19bcb7;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

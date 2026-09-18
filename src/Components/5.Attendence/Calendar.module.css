@@ -1,0 +1,19 @@
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.date {
+  width: 60px;
+  height: 60px;
+  margin: 20px auto;
+  background: #13c7b5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}

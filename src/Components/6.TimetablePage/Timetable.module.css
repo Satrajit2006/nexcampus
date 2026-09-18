@@ -1,0 +1,170 @@
+.days {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.dayCard {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dayCard:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.dayCard:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.dayCard span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dayCard small {
+  font-size: 11px;
+  margin-top: 3px;
+  color: #64748b;
+}
+
+.active {
+  background: #14b8a6;
+  color: white;
+  border-color: #14b8a6;
+}
+
+.active small {
+  color: white;
+}
+
+/* TABLE */
+
+.timetable {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  height: 50px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.timeHeader,
+.dayHeader {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: medium;
+  font-weight: 600;
+  color: #111827;
+}
+
+.timeHeader {
+  border-right: 1px solid #e5e7eb;
+  
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.timeCell {
+  padding: 14px;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeCell span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.timeCell small {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.classCard {
+  margin: 8px;
+  border-radius: 8px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 3px solid;
+}
+
+.classCard h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Card Colors */
+
+.ds {
+  background: #f2f9f8;
+  border-left-color: #22c7b8;
+}
+
+.dbms {
+  background: #f4f7fc;
+  border-left-color: #3b82f6;
+}
+
+.se {
+  background: #f7f4fd;
+  border-left-color: #a855f7;
+}
+
+.dm {
+  background: #fcf8ef;
+  border-left-color: #f4c24f;
+}
+
+.cn {
+  background: #fdf1ed;
+  border-left-color: #fb8c72;
+}
+
+.oop {
+  background: #eef8f7;
+  border-left-color: #22c7b8;
+}
+
+.tc {
+  background: #f8f9fb;
+  border-left-color: #94a3b8;
+}

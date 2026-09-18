@@ -1,0 +1,39 @@
+.card {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #14b8a6;
+  border-radius: 50%;
+}
+
+.dotPurple {
+  width: 8px;
+  height: 8px;
+  background: #a855f7;
+  border-radius: 50%;
+}
+
+.dotOrange {
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+}

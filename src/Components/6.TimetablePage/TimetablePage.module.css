@@ -1,0 +1,53 @@
+.page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 24px;
+  padding: 24px;
+  background: #fafbfd;
+  min-height: 100vh;
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+ 
+ 
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.header p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 10px 14px;
+  border-radius: 8px;
+  height: 40px
+  
+}
+.actions button h1{
+  font-size: small;
+}

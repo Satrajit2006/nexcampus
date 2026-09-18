@@ -1,0 +1,129 @@
+.header {
+  height: 70px;
+  width: 100%;
+  background: #fff;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+/* Left */
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.menuBtn {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: #2d3748;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #8b95a7;
+}
+
+/* Right */
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.searchBox {
+  width: 280px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.searchIcon {
+  color: #9ca3af;
+}
+
+.notification {
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ef4444;
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile h4 {
+  font-size: 14px;
+  color: #111827;
+}
+
+.profile p {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #6b7280;
+}
+.title,
+.subtitle,
+.profile h4,
+.profile p {
+  margin: 0;
+}

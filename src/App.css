@@ -1,0 +1,39 @@
+.body{
+  background-color: #F8FAFC;
+  display: flex;
+}
+
+
+.sidebar{
+  border: 1px solid rgb(224, 220, 220);
+  
+}
+.sideheading{
+  margin: 10px;
+}
+.Body{
+  padding: 20px;
+  width: 70vw;
+  zoom: 0.9;
+  /* background-color: red; */
+
+}
+.layout{
+  display: flex;
+}
+
+
+
+
+input{
+   border: none;
+}
+button{
+  border: none;
+}
+.Rside{
+margin-top: 20px;
+}
+.content{
+  width: 100%;
+}

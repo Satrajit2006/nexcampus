@@ -1,0 +1,26 @@
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+ 
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.left h5{
+    font-size: 18px;
+}
+
+.left p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.active {
+  border: 2px solid #14b8a6;
+  background: #f0fdfa;
+}

@@ -1,0 +1,74 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.grid > div {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.grid svg {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.grid h2 {
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.grid p {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Same colors as screenshot */
+
+.green {
+  background: #edfdfa;
+}
+
+.green svg {
+  color: #14b8a6;
+}
+
+.green2 {
+  background: #f0fdf4;
+}
+
+.green2 svg {
+  color: #22c55e;
+}
+
+.blue {
+  background: #eff6ff;
+}
+
+.blue svg {
+  color: #3b82f6;
+}
+
+.purple {
+  background: #f5f3ff;
+}
+
+.purple svg {
+  color: #8b5cf6;
+}
